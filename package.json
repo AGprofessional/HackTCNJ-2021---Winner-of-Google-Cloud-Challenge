@@ -1,14 +1,13 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://agprofessional.github.io/hackTCNJ-project",
+ 
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject",
-    "deploy": "gh-pages -d web-build",
-    "predeploy": "expo build:web"
+    "eject": "expo eject"
+   
   },
   "dependencies": {
     "expo": "~40.0.0",
