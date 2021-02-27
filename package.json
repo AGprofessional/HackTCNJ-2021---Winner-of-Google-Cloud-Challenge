@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "homepage": "https://agprofessional.github.io/",
+  "homepage": "https://agprofessional.github.io/hackTCNJ-project",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
