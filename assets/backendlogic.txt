@@ -1,0 +1,41 @@
+1. upload the 5 pdfs to cloud storage
+2. get each pdf and do logic on it - gets hw, assignment, exam due dates (ready to feed to calendar api)
+--
+User1: (bucket)
+Model data: 
+"hw": "2-1-2021"
+"hw":"2-6-2021"
+
+hw is due 2-1-2021, every friday until may 5
+exam1: 2/3/2021
+final: 4/2/2021
+  write into database (Do it manually)
+  read out --> calendar api
+3. user sends raw data to cloud storage: (activitype): number of hours to complete)
+categories: eating, sleeping, exercise, clubs, socializing, not async lecture times
+per day hours.
+
+exercise: 1hr
+eat: 1hr
+sleep: 8hrs
+(contiguous)
+write into database
+read it out-->calendar api
+
+(ready to feed to calendar)
+4. logic then finds all free times and reserves it for studying, prioritizing it by what's due soonest
+
+
+
+Firebase Model
+Every user is a collection
+User1: collection
+    class1: each document is a class (class1 is a collection of deadlines)
+        assignment-string:timestamp
+        activity-string:float (number of hours needed)
+    class2:
+
+    class3:
+
+    class4:
+

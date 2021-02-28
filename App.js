@@ -4,6 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from "./components/screens/Home";
 import UploadScreen from "./components/screens/Upload";
+import ActivitiesScreen from "./components/screens/Activities";
+import ViewCalendar from "./components/screens/ViewCalendar";
+import "./firebase.js"
 /*
 function HomeScreen({ navigation }) {
   return (
@@ -51,6 +54,7 @@ function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Upload" component={UploadScreen} />
           <Stack.Screen name="Activities" component={ActivitiesScreen} />
+          <Stack.Screen name="ViewCalendar" component={ViewCalendar} />
       </Stack.Navigator>
     </NavigationContainer>
   );
