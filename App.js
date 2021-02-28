@@ -16,7 +16,7 @@ function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Upload" component={UploadScreen} />
           <Stack.Screen name="Activities" component={ActivitiesScreen} />
-          <Stack.Screen name="ViewCalendar" component={ViewCalendarScreen} />
+          <Stack.Screen name="View Calendar" component={ViewCalendarScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

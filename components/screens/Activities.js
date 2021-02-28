@@ -43,14 +43,14 @@ var setWithMerge = cityRef.set({
     exercise:e
 
 }, { merge: true });
-        
 
+
+        
+//now call generateCalendarLogic function, written in ViewCalendar.js for right now
     }
   
- const transferState1=()=>{
-     console.log('sleep'+sleep);
- }
     return(
+        <>
       <View style={styles.container}>
         <Text style={styles.title}>Every Day I Need:</Text>
         <Text style={styles.question}>Sleep</Text>
@@ -61,7 +61,7 @@ var setWithMerge = cityRef.set({
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
             onChangeText={text => setSleep(text)}
-            value={sleep}/>
+           />
         </View>
         <Text style={styles.question}>Exercise</Text>
         <View style={styles.inputView} >
@@ -70,7 +70,7 @@ var setWithMerge = cityRef.set({
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
             onChangeText={text => setE(text)}
-            value={e}/>
+        />
             </View>
         <Text style={styles.question}>Time for friends and family</Text>
         <View style={styles.inputView} >
@@ -79,7 +79,7 @@ var setWithMerge = cityRef.set({
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
             onChangeText={text => setSocial(text)}
-            value={social}/>
+          />
             </View>
             
         <Text style={styles.question}>Time for breakfast, lunch, dinner, and snacks</Text>
@@ -89,7 +89,7 @@ var setWithMerge = cityRef.set({
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
             onChangeText={text => setFood(text)}
-            value={food}/>
+            />
             </View>
         <TouchableOpacity onPress={transferState} style={styles.buttonB}>
     
@@ -98,17 +98,19 @@ var setWithMerge = cityRef.set({
       </TouchableOpacity >
       
   
+      
+      <Button style={styles.button}
+        onPress={() => navigation.navigate('View Calendar')}
+        title="View Calendar"
+      >
+      </Button>
       </View>
-  
+  </>
   );
 }
 
 /*
-         <Button style={styles.button}
-        onPress={() => navigation.navigate('ViewCalendar')}
-        title="View Calendar"
-      >
-      </Button>*/ 
+         */ 
 
 
 const styles = StyleSheet.create({

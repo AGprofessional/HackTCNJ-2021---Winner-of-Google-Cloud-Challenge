@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "allhandsondeck-306211",
+  "private_key_id": "01b9e062000e439fd1719c0ac8a234a43657cb58",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCm+XejaaqX6vj8\nu2bWt4HKWFXe+eKtbc+pY5UMNjq/ojGLACTpmi8MuKo2WsagDrFgyVR29X1zaiFk\n4Jtwnqq+dTYF7YuH8PDnRajA27809zIGtjtnnJbiu07yiwLMPCgceORGagKJ0ooP\nT9LZzZ8BxZVMlZJgHNajIxPms3T9kILpbdyyDAg60OssT19dtBirnfyn1eLYmWj4\nJdsiBH3Hx0WIE8vGBGLCErvGpcRNNHa+3QJls6hGNOakAx35qURhcIXKy6kWfe40\n+gs3WA3u6nNzhmoZUPXLiR7jatO/q+chWIPJHa6QzUIPR4UWqc9Btmc3daE6PkBX\nI6n4W8N1AgMBAAECggEADaJSeeNyQelhNLHQrzkDaL8ByVfk1yh09m3iiRa8gVKr\nHPXWuG8V5xdaaV8hgjGbm5LqSgm4Q/5R2meEtGjK+bZJwlN9OzfEqVMaI8qjDZ4f\nAEaiXyQoJede25XXlU8BhMxSR3Wh3hh08X8hG8EbJLfk0wC7l7bYcoW2EEvDAm6d\nSCp6HAYu/RV1aPujG6DSoVTUDXqf580asKPoEkT38ZDKsY9uSqSIQ5PWRRhXQKic\nCDzo+sYe0fwUN/7fEgwnPJMWiPwHJmZW/DbqlrFTRZF+oi5DRf0utePl38Oh62Qa\nEF1vBvjoASvWWCY9zUC+4M4f+9kygxNbr26/9w29wQKBgQDRiIvADa+DiSZ/LI+H\nRJYZvv5ESFuCy2TxkjRunOwROAijQI+QbVxy8y1P56sO/H2rfmjiTSA4MYCXfWDF\nB2DQJMdwP/4nkla3bLLywpY8GS9x5xUsUvRluXqlk9JsuoDjveJkp6l7gD2YgWtD\nzZ1T1msnsJisWDvL6tJilP7r6QKBgQDMAM2Xh/68/LgMVSu7TXSy4rMLZ+3St1WU\nPbrq7sz9Ck3BImNLSfpd9Yt+AUxWCXDy0lDr95QYVweBsl3Cf4H1VZW0TIWdNdFr\nyvYdQjY6fqjZgd//acnCumMgomlYLFSw1ClCGODHM3WAejfyqbhgLDHbIYQ2+4/D\n7MJVjsg/rQKBgHUWRnGltCReqaJ7NiEylGYCsndZr7lhCyFqv93n1oqwszL2ysK8\nOeMKPJHgNViEg30ngFilHJIKJ39/0mmHe/QT+Vaii9V1Evwgw8agMe+Xa0nNBanl\nGSkXApAwEHAtsASTgUUZ471dpg3olBYpefb1ZJ+jMU1taMzEhZgNBn6xAoGAb65I\n3xn+ZSvc/jNqW4HNz1i4OBhPZDolyZ/5wj+1TRnk80SGI2N+gw23reW8CqXkhaqJ\nzoSdOK38WA5zsdToKo0OBcSWqTgbS+2yytXCpkdM3LZzEHqzj71GI0mGblTmkF+1\nro+8DpGnVAyUsG4ll9DaAmLY5NjXHaVxxjECg4kCgYB7dLtExaW4wogk5Tr3w3Ma\n86uVHQZSRL0f+KjjXIbFLRWygywly2ExMH2uDdSuZQM2rAHK1ciTwgysc/4OLioe\nqAaRFDlgYqdE6hBT61cX1CeYjFIDyXBlCbFITJak1GDKo75/iz/0ROt2pTo5Dr3s\nwm6ctFL63pqcX7fSeAM0gw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "hacktcnj@allhandsondeck-306211.iam.gserviceaccount.com",
+  "client_id": "117391827762130817624",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hacktcnj%40allhandsondeck-306211.iam.gserviceaccount.com"
+}

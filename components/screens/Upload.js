@@ -32,10 +32,10 @@ const dbh = firebase.firestore();
 dbh.collection("user_Akash").doc("syllabus_for_Math201").set({
    start_week: "01-20-2021",
    end_week:"05-14-2021",
-  homework_start: "01-22-2021",
+  homework_start: "01-22-2021, 1 hour",
   homework_repeat:"every friday",
-  exam1: "03-04-2021",
-  final:"05-10-2021",
+  exam1: "03-04-2021, 3pm to 5pm",
+  final:"05-10-2021, 7am to 8am",
   
 })
 
