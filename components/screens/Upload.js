@@ -4,7 +4,8 @@ import { TextInput } from 'react-native';
 
 import { Image, TouchableOpacity} from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-
+//import * as firebase from 'firebase'
+import 'firebase/firestore';
 import { firebase } from '@firebase/app';
 import picture from "../../assets/iphone_picture.jpg";
 import '@firebase/auth';

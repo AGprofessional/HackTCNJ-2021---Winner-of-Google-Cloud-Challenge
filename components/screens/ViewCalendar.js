@@ -3,6 +3,11 @@ import { TextInput, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import picture1 from "../../assets/finalcalendar.jpg";
+
+
+//import * as firebase from 'firebase'
+import 'firebase/firestore';
 import { firebase } from '@firebase/app';
 import '@firebase/auth'
 import '@firebase/firestore'
@@ -79,15 +84,20 @@ docRef.get().then((doc) => {
     console.log("Error getting document:", error);
 });
  }
-
+// <Image source={picture1} style={styles.picture} />
     return(
-      <View style={styles.title}>
+      <>
+      
+      <View style={styles.container}>
+   
+     
        <TouchableOpacity onPress={readBackData} style={styles.loginBtn}>
          
           <Text style={styles.loginText}>Go to Google Calendar</Text>
       
         </TouchableOpacity>
         </View>
+        </>
   );
   }
 
@@ -147,5 +157,9 @@ const styles = StyleSheet.create({
     color:"2f323a",
     fontSize: 18,
     
+  },
+  picture:{
+    width:300,
+    height:300
   }
 });

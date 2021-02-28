@@ -9,17 +9,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 export default function HomeScreen({navigation}) {
     const [login, setLogin]=useState({email:"",
     password:""
-  });
-  
-
- 
+  }); 
     return(
       <View style={styles.container}>
-        <Text style={styles.logo}>Study Plan</Text>
+        <Text style={styles.logo}>All Hands on Deck</Text>
         <View style={styles.inputView} >
           <TextInput  
             style={styles.inputText}
-            placeholder="Email..." 
+            placeholder="Email..."
             placeholderTextColor="#003f5c"
             onChangeText={text => setLogin({email:text})}/>
         </View>
