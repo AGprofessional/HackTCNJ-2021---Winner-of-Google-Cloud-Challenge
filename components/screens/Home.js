@@ -1,5 +1,5 @@
 //import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 import { Button, View, Text } from 'react-native';
@@ -21,7 +21,7 @@ export default function HomeScreen({navigation}) {
             style={styles.inputText}
             placeholder="Email..." 
             placeholderTextColor="#003f5c"
-            onChangeText={text => setState({email:text})}/>
+            onChangeText={text => setLogin({email:text})}/>
         </View>
         <View style={styles.inputView} >
           <TextInput  
@@ -29,18 +29,15 @@ export default function HomeScreen({navigation}) {
             style={styles.inputText}
             placeholder="Password..." 
             placeholderTextColor="#003f5c"
-            onChangeText={text => setState({password:text})}/>
+            onChangeText={text => setLogin({password:text})}/>
         </View>
         <TouchableOpacity>
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.loginBtn}>
-           <Button
-        title="Login"
-        onPress={() => navigation.navigate('Upload')}
-      >
+        <TouchableOpacity onPress={() => navigation.navigate('Upload')} style={styles.loginBtn}>
+         
           <Text style={styles.loginText}>LOGIN</Text>
-      </Button>  
+      
         </TouchableOpacity>
         <TouchableOpacity>
           <Text style={styles.signupText}>Signup</Text>
@@ -55,48 +52,56 @@ export default function HomeScreen({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: "debac0",
     alignItems: 'center',
     justifyContent: 'center',
   },
   logo:{
     fontWeight:"bold",
-    fontSize:50,
+    fontSize:100,
     color:"#fb5b5a",
     marginBottom:40
   },
   inputView:{
-    width:"80%",
-    backgroundColor:"#465881",
+    width:"40%",
+    backgroundColor:"#79a9d1",
     borderRadius:25,
     height:50,
     marginBottom:20,
     justifyContent:"center",
-    padding:20
+    padding:20,
+    outline:"none",
+
   },
   inputText:{
-    height:50,
-    color:"white"
+    height:70,
+    color:"2f323a",
+    //fontWeight:400,
+     outline:"none",
   },
   forgot:{
-    color:"white",
-    fontSize:11
+    color:"2f323a",
+    fontSize:17
   },
   loginBtn:{
-    width:"80%",
+    width:"40%",
     backgroundColor:"#fb5b5a",
     borderRadius:25,
     height:50,
     alignItems:"center",
     justifyContent:"center",
     marginTop:40,
-    marginBottom:10
+    marginBottom:10,
+     fontSize: 18,
   },
   loginText:{
-    color:"white"
+    color:"2f323a",
+         fontSize: 30,
+
   },
   signupText:{
-    color:"white",
-    fontWeight:"200"
+    color:"2f323a",
+    fontSize: 18,
+    
   }
 });

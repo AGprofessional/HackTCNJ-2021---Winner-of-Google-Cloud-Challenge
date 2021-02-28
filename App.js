@@ -5,8 +5,25 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from "./components/screens/Home";
 import UploadScreen from "./components/screens/Upload";
 import ActivitiesScreen from "./components/screens/Activities";
-import ViewCalendar from "./components/screens/ViewCalendar";
-import "./firebase.js"
+import ViewCalendarScreen from "./components/screens/ViewCalendar";
+
+const Stack = createStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Upload" component={UploadScreen} />
+          <Stack.Screen name="Activities" component={ActivitiesScreen} />
+          <Stack.Screen name="ViewCalendar" component={ViewCalendarScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+
 /*
 function HomeScreen({ navigation }) {
   return (
@@ -31,9 +48,9 @@ function DetailsScreen({ navigation }) {
     </View>
   );
 }
-*/
 
-function Activities({ navigation }) {
+
+function ViewCalendar({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
@@ -44,20 +61,4 @@ function Activities({ navigation }) {
     </View>
   );
 }
-
-const Stack = createStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Upload" component={UploadScreen} />
-          <Stack.Screen name="Activities" component={ActivitiesScreen} />
-          <Stack.Screen name="ViewCalendar" component={ViewCalendar} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
-export default App;
+*/

@@ -7,6 +7,10 @@ import * as firebase from 'firebase';
 //import "firebase/functions";
 //import "firebase/storage";
 
+
+import 'firebase/firestore';
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyBj23uuMAWUK4PI0NizyNdKBlJH6gCFLMk",
     authDomain: "studyplan-649e4.firebaseapp.com",
@@ -17,3 +21,12 @@ const firebaseConfig = {
     measurementId: "G-WCZ25SMS2S"}
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  
+const dbh = firebase.firestore();
+
+dbh.collection("characters").doc("mario").set({
+  employment: "plumber",
+  outfitColor: "red",
+  specialAttack: "fireball"
+})
+
