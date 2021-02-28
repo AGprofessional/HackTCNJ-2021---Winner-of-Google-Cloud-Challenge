@@ -4,19 +4,52 @@ import { TextInput, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { firebase } from '@firebase/app';
+import '@firebase/auth'
+import '@firebase/firestore'
 
-function sendState(){}
 
 export default function Activities({navigation}) {
-    const [data, setData]=useState(
-{    food:0,
-    sleep:0,
-    socialization:0,
-    exercise:0
-}
-    );
-  
  
+const [food,setFood] = useState(0);
+const [sleep, setSleep] = useState(0);
+const [social, setSocial]=useState(0);
+const [e, setE] = useState(0);
+
+    const transferState = ()=>{
+const firebaseConfig = {
+    apiKey: "AIzaSyBj23uuMAWUK4PI0NizyNdKBlJH6gCFLMk",
+    authDomain: "studyplan-649e4.firebaseapp.com",
+    projectId: "studyplan-649e4",
+    storageBucket: "studyplan-649e4.appspot.com",
+    messagingSenderId: "889492028331",
+    appId: "1:889492028331:web:8cf6bfc19ab5d00da330ee",
+    measurementId: "G-WCZ25SMS2S"}
+  // Initialize Firebase
+  if (!firebase.apps.length) {
+   firebase.initializeApp(firebaseConfig);
+}else {
+   firebase.app(); // if already initialized, use that one
+}
+
+  
+const dbh = firebase.firestore();
+var cityRef = dbh.collection("user_Akash").doc("syllabus_for_Math201");
+
+var setWithMerge = cityRef.set({
+   food: food,
+   sleep:sleep,
+    socialization:social,
+    exercise:e
+
+}, { merge: true });
+        
+
+    }
+  
+ const transferState1=()=>{
+     console.log('sleep'+sleep);
+ }
     return(
       <View style={styles.container}>
         <Text style={styles.title}>Every Day I Need:</Text>
@@ -27,7 +60,8 @@ export default function Activities({navigation}) {
              keyboardType='numeric'
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
-            onChangeText={text => setData({sleep:text})}/>
+            onChangeText={text => setSleep(text)}
+            value={sleep}/>
         </View>
         <Text style={styles.question}>Exercise</Text>
         <View style={styles.inputView} >
@@ -35,7 +69,8 @@ export default function Activities({navigation}) {
             style={styles.inputText}
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
-            onChangeText={text => setData({exercise:text})}/>
+            onChangeText={text => setE(text)}
+            value={e}/>
             </View>
         <Text style={styles.question}>Time for friends and family</Text>
         <View style={styles.inputView} >
@@ -43,7 +78,8 @@ export default function Activities({navigation}) {
             style={styles.inputText}
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
-            onChangeText={text => setData({socializing:text})}/>
+            onChangeText={text => setSocial(text)}
+            value={social}/>
             </View>
             
         <Text style={styles.question}>Time for breakfast, lunch, dinner, and snacks</Text>
@@ -52,25 +88,27 @@ export default function Activities({navigation}) {
             style={styles.inputText}
             placeholder="The number of hours I need are..." 
             placeholderTextColor="#003f5c"
-            onChangeText={text => setData({eating:text})}/>
+            onChangeText={text => setFood(text)}
+            value={food}/>
             </View>
-        <TouchableOpacity onPress={sendState} style={styles.buttonB}>
+        <TouchableOpacity onPress={transferState} style={styles.buttonB}>
     
         <Text style={styles.buttonText}>Generate Calendar</Text>
       
       </TouchableOpacity >
-         <Button style={styles.button}
-        onPress={() => navigation.navigate('ViewCalendar')}
-        title="View Calendar"
-      >
-      </Button>
+      
   
       </View>
   
   );
 }
 
-
+/*
+         <Button style={styles.button}
+        onPress={() => navigation.navigate('ViewCalendar')}
+        title="View Calendar"
+      >
+      </Button>*/ 
 
 
 const styles = StyleSheet.create({
