@@ -4,10 +4,11 @@ import { TextInput, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { firebase } from '@firebase/app';
-import '@firebase/auth'
-import '@firebase/firestore'
 
+
+import { firebase } from '@firebase/app';
+import '@firebase/auth';
+import '@firebase/firestore';
 
 export default function Activities({navigation}) {
  

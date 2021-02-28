@@ -7,8 +7,10 @@ import * as ImagePicker from 'expo-image-picker';
 
 import { firebase } from '@firebase/app';
 import picture from "../../assets/iphone_picture.jpg";
-import '@firebase/auth'
-import '@firebase/firestore'
+import '@firebase/auth';
+import '@firebase/firestore';
+
+
 function writeFirebase(){
 
 const firebaseConfig = {
