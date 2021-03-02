@@ -11,6 +11,8 @@ import { firebase } from '@firebase/app';
 import '@firebase/auth';
 import '@firebase/firestore';
 
+require('dotenv').config();
+
 export default function Activities({navigation}) {
  
 const [food,setFood] = useState(0);
@@ -19,37 +21,20 @@ const [social, setSocial]=useState(0);
 const [e, setE] = useState(0);
 
     const transferState = ()=>{
-      /*
-const firebaseConfig = {
-    apiKey: "AIzaSyBj23uuMAWUK4PI0NizyNdKBlJH6gCFLMk",
-    authDomain: "studyplan-649e4.firebaseapp.com",
-    projectId: "studyplan-649e4",
-    storageBucket: "studyplan-649e4.appspot.com",
-    messagingSenderId: "889492028331",
-    appId: "1:889492028331:web:8cf6bfc19ab5d00da330ee",
-    measurementId: "G-WCZ25SMS2S"}*/
-
+      
     const firebaseConfig = {
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
  
-    apiKey: "AIzaSyDukuEsZP9VaAJ0DJs0v-gmRsOxdYgsOaE",
-    authDomain: "allhandsondeck-hacktcnj2021.firebaseapp.com",
-    projectId: "allhandsondeck-hacktcnj2021",
-    storageBucket: "allhandsondeck-hacktcnj2021.appspot.com",
-    messagingSenderId: "478320298909",
-    appId: "1:478320298909:web:c710e338e89bed20257d74",
-    measurementId: "G-K7QJBVHXVJ"}
-/*
-    apiKey: "AIzaSyBj23uuMAWUK4PI0NizyNdKBlJH6gCFLMk",
-    authDomain: "studyplan-649e4.firebaseapp.com",
-    projectId: "studyplan-649e4",
-    storageBucket: "studyplan-649e4.appspot.com",
-    messagingSenderId: "889492028331",
-    appId: "1:889492028331:web:8cf6bfc19ab5d00da330ee",
-    measurementId: "G-WCZ25SMS2S"
-    */
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.authDomain,
+    projectId: process.env.projectId,
+    storageBucket: process.env.storageBucket,
+    messagingSenderId: process.env.messagingSenderId,
+    appId: process.env.appId,
+    measurementId: process.env.measurementId
+    }
 
   // Initialize Firebase
   if (!firebase.apps.length) {
